@@ -34,7 +34,7 @@ namespace Recommendations
 
     public class RecommendationsSampleApp
     {
-        private static string AccountKey = ""; // <---  Set to your API key here.
+        private static string AccountKey = "e52445c0fd45488ba68d16628d2d2d46"; // <---  Set to your API key here.
         private const string BaseUri = "https://westus.api.cognitive.microsoft.com/recommendations/v4.0"; 
         private static RecommendationsApiWrapper recommender = null;
 
@@ -149,7 +149,7 @@ namespace Recommendations
             {
                 var usageFile = new FileInfo(usage);
                 recommender.UploadUsage(modelId, usageFile.FullName, usageFile.Name);
-                usageFilesCount++;
+               usageFilesCount++;
             }
 
             Console.WriteLine("Imported {0} usage files.", usageFilesCount);
